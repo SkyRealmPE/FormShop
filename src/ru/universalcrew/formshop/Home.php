@@ -51,7 +51,7 @@ class Home extends PluginBase
 
     function onEnable()
     {
-        $this->getLogger()->info($this->getDescription()->getName() . " включен.");
+        $this->getLogger()->info($this->getDescription()->getName() . " Shop for SkyRealmPE's Server!");
         $this->loadPlugins();
         $this->loadClass();
         $this->initCommands();
@@ -68,7 +68,7 @@ class Home extends PluginBase
     {
         if ($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") === null ||
             $this->getServer()->getPluginManager()->getPlugin("FormAPI") === null) {
-            $this->getLogger()->critical('Дополнительные плагины не установлены. FormShop выключается...');
+            $this->getLogger()->critical('FormShop crashing.. oh no!');
             $this->getServer()->getPluginManager()->disablePlugin($this);
         } else {
             $this->economyapi = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
@@ -134,7 +134,7 @@ class Home extends PluginBase
 
     function onDisable()
     {
-        $this->getLogger()->info($this->getDescription()->getName() . " выключен.");
+        $this->getLogger()->info($this->getDescription()->getName() . " Shop plugin is disabling");
     }
 
 }
