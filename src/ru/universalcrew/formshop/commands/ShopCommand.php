@@ -34,8 +34,8 @@ class ShopCommand extends Command implements PluginIdentifiableCommand
      */
     public function __construct(Home $home)
     {
-        parent::__construct("shop", "Магазин", "shop", []);
-        $this->setPermission("ru.universalcrew.formshop.shop");
+        parent::__construct("shop", "skyshop", "ss", []);
+        $this->setPermission("skyshop.command");
         $this->home = $home;
     }
 
